@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Snake</title>
+  <title>Snake Game</title>
+  <link rel="stylesheet" href="./style.css">
   <style>
     body {
       height: 100vh;
@@ -12,32 +13,41 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      margin: 0;
-      background-color: black;
+      margin: 0px;
+      padding: 0px;
+      background-color: #ccc;
     }
 
     #game-board {
-      background-color: #CCC;
-      width: 100vmin;
-      height: 100vmin;
+      background-color: black;
+      width: 85vmin;
+      height: 85vmin;
       display: grid;
       grid-template-rows: repeat(21, 1fr);
       grid-template-columns: repeat(21, 1fr);
+      box-shadow: black 20px 10px 50px;
     }
 
     .snake {
-      background-color: hsl(200, 100%, 50%);
+      background-color: hsl(148, 100%, 50%);
       border: .25vmin solid black;
     }
 
     .food {
-      background-color: hsl(50, 100%, 50%);
+      background-color: hsl(0, 100%, 50%);
       border: .25vmin solid black;
     }
   </style>
   <script src="game.js" defer type="module"></script>
 </head>
 <body>
+  <h1>SNAKE GAME</h1>
+  
+  <ul>
+    <li> <a id="start-button" href="#game">PLAY</a> </li>
+    <li> <a id="restart-button" href="#game">RESTART</a> </li>
+  </ul>
+
   <div id="game-board"></div>
 </body>
 </html>

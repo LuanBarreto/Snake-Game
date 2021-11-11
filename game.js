@@ -19,7 +19,6 @@ function main(currentTime) {
   const secondsSinceLastRender = (currentTime - lastRenderTime) / 1000
   if (secondsSinceLastRender < 1 / SNAKE_SPEED) return
 
-
   lastRenderTime = currentTime
 
   update()
@@ -38,6 +37,7 @@ function draw() {
   gameBoard.innerHTML = ''
   drawSnake(gameBoard)
   drawFood(gameBoard)
+  drawScore(score)
 }
 
 function checkDeath() {
